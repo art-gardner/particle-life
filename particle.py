@@ -4,7 +4,7 @@ import random
 
 class Particle:
 
-    def __init__(self, size, type, relations):
+    def __init__(self, size, type, relations, screen):
 
         self.size = size
         self.pos = [random.randint(0, self.size), random.randint(0, self.size)]
@@ -12,6 +12,7 @@ class Particle:
         self.type = type
         self.colour = relations[type]["colour"]
         self.relations = relations[type]["relations"]
+        self.screen = screen
 
     def getpos(self):
         return int(self.pos[0]), int(self.pos[1])
